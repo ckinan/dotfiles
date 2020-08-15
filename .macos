@@ -94,9 +94,11 @@ defaults write com.apple.screencapture location -string "${HOME}/Documents/scree
 defaults write com.apple.finder QuitMenuItem -bool true
 
 # Set Desktop as the default location for new Finder windows
+# defaults write com.apple.finder NewWindowTarget -string "PfDe"
+
 # For other paths, use `PfLo` and `file:///full/path/here/`
-defaults write com.apple.finder NewWindowTarget -string "PfDe"
-defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 
 # Finder: show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
