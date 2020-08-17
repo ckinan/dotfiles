@@ -7,3 +7,7 @@ My dotfiles.
 - Give execution permissions `chmod +x .macos`
 - Execute `./.macos`
 - Restart your mac
+
+### TODO
+- [ ] Disable autocorrection
+- [ ] Fix touchbar
