@@ -13,3 +13,4 @@ My dotfiles.
 - [ ] Fix touchbar
 - [ ] Show battery percentage
 - [ ] Display the time with seconds
+- [ ] Date options: Show date
