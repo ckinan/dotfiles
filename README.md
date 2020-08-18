@@ -12,3 +12,4 @@ My dotfiles.
 - [ ] Disable autocorrection
 - [ ] Fix touchbar
 - [ ] Show battery percentage
+- [ ] Display the time with seconds
