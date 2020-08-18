@@ -11,3 +11,4 @@ My dotfiles.
 ### TODO
 - [ ] Disable autocorrection
 - [ ] Fix touchbar
+- [ ] Show battery percentage
