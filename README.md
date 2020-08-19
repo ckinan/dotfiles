@@ -14,3 +14,6 @@ My dotfiles.
 - [ ] Show battery percentage
 - [ ] Display the time with seconds
 - [ ] Date options - Show date
+
+## OpenJDK
+- https://github.com/AdoptOpenJDK/homebrew-openjdk
