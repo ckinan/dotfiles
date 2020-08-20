@@ -15,6 +15,7 @@ My dotfiles.
 - [ ] Display the time with seconds
 - [ ] Date options - Show date
 - [ ] Screen resolution
+- [ ] Screenshot folder (create a ~/screenshots folder first, otherwise screenshots will be saved in ~/Desktop)
 
 ## OpenJDK
 - https://github.com/AdoptOpenJDK/homebrew-openjdk
