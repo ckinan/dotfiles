@@ -16,6 +16,7 @@ My dotfiles.
 - [ ] Date options - Show date
 - [ ] Screen resolution
 - [ ] Screenshot folder (create a ~/screenshots folder first, otherwise screenshots will be saved in ~/Desktop)
+- [ ] Disable shortcut (command+space) for spotlight in favour of using Alfred
 
 ## OpenJDK
 - https://github.com/AdoptOpenJDK/homebrew-openjdk
