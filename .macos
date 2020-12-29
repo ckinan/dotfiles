@@ -91,7 +91,7 @@ defaults write com.apple.screencapture location -string "${HOME}/Documents/scree
 ###############################################################################
 
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
-defaults write com.apple.finder QuitMenuItem -bool false
+# defaults write com.apple.finder QuitMenuItem -bool true
 
 # Set Desktop as the default location for new Finder windows
 # defaults write com.apple.finder NewWindowTarget -string "PfDe"
