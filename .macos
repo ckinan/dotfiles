@@ -132,7 +132,8 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 ###############################################################################
 
 # Don’t animate opening applications from the Dock
-defaults write com.apple.dock launchanim -bool false
+# Updated may 2021, started to like this feature (one way to know the app is responding while opening) :)
+# defaults write com.apple.dock launchanim -bool false
 
 # Set the icon size of Dock items to 16 pixels
 defaults write com.apple.dock tilesize -int 35
@@ -142,9 +143,6 @@ defaults write com.apple.dock show-recents -bool false
 
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
-
-# Don’t animate opening applications from the Dock
-defaults write com.apple.dock launchanim -bool false
 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
