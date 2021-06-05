@@ -8,3 +8,6 @@ jdk() {
         export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
         java -version
 }
+
+# Customize prompt
+export PS1="%~ $ "
