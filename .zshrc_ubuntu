@@ -1,0 +1,13 @@
+# ***************************************
+# https://askubuntu.com/a/360172/1341415
+setopt PROMPT_SUBST
+PROMPT='%~ %F{yellow}[%D{%H:%M:%S}]%f > %b'
+TMOUT=1
+
+TRAPALRM() {
+    zle reset-prompt
+}
+# ***************************************
+
+alias ll='ls -laGh'
+alias gl='git log --pretty=format:"%C(Green)%h %C(Red)[.%D.] %C(Blue)[%an] %C(Yellow)[%s] %C(Magenta)[%ad (%ar)]"'
