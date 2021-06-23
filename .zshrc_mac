@@ -1,0 +1,23 @@
+alias ll='ls -laGh'
+alias gl='git log --pretty=format:"%C(Green)%h %C(Red)[.%D.] %C(Blue)[%an] %C(Yellow)[%s] %C(Magenta)[%ad (%ar)]"'
+
+# https://github.com/AdoptOpenJDK/homebrew-openjdk
+# e.g. "jdk 1.8" OR "jdk 14"
+jdk() {
+        version=$1
+        export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+        java -version
+}
+
+# Customize prompt
+# export PS1="%~ $ "
+# https://jonasjacek.github.io/colors/
+# https://askubuntu.com/questions/360063/how-to-show-a-running-clock-in-terminal-before-the-command-prompt?newreg=a735ec88e8e14de9acd4a9addaa36073
+# https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/
+setopt PROMPT_SUBST
+PROMPT='%K{220}%F{0} %D{%L:%M:%S} %f%k%K{39}%F{0} %~ %f%k%K{112}%F{0} $(git branch 2>/dev/null | grep "^*" | colrm 1 2) %f%k > %b'
+TMOUT=1
+
+TRAPALRM() {
+    zle reset-prompt
+}
