@@ -2,7 +2,7 @@
 # https://askubuntu.com/a/360172/1341415
 setopt PROMPT_SUBST
 # Customize prompt (timestamp) (current directory) (git branch) and some color
-PROMPT='%K{#C7AA10}%F{#000000}%D{ %H:%M:%S }%k%f%K{#1778BD}%F{#FFFFFF} %~ %k%f%K{#74C410}%F{#000000} $(git branch 2>/dev/null | grep "^*" | colrm 1 2) %k%f > %b'
+PROMPT='%K{#C7AA10}%F{#000000}%D{ %H:%M:%S }%k%f%K{#1778BD}%F{#000000} %~ %k%f%K{#74C410}%F{#000000} $(git branch 2>/dev/null | grep "^*" | colrm 1 2) %k%f > %b'
 TMOUT=1
 
 TRAPALRM() {
