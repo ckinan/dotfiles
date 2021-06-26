@@ -15,7 +15,7 @@ jdk() {
 # https://askubuntu.com/questions/360063/how-to-show-a-running-clock-in-terminal-before-the-command-prompt?newreg=a735ec88e8e14de9acd4a9addaa36073
 # https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/
 setopt PROMPT_SUBST
-PROMPT='%K{220}%F{0} %D{%H:%M:%S} %f%k%K{39}%F{0} %~ %f%k%K{112}%F{0} $(git branch 2>/dev/null | grep "^*" | colrm 1 2) %f%k > %b'
+PROMPT='%K{220}%F{0} %D{%H:%M:%S} %f%k%K{39}%F{0} %~ %f%k%K{112}%F{0} $(git branch 2>/dev/null | grep "^*" | colrm 1 2) %f%k > '
 TMOUT=1
 
 TRAPALRM() {
