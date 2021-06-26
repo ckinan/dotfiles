@@ -39,7 +39,7 @@ git_branch() {
 }
 
 setopt PROMPT_SUBST
-PROMPT='$(clock)$(directory)$(git_branch)${NEW_LINE}> '
+PROMPT='$(clock)$(directory)$(git_branch)${NEW_LINE}-> '
 TMOUT=1
 
 TRAPALRM() {
