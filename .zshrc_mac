@@ -15,9 +15,31 @@ jdk() {
 # https://askubuntu.com/questions/360063/how-to-show-a-running-clock-in-terminal-before-the-command-prompt?newreg=a735ec88e8e14de9acd4a9addaa36073
 # https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/
 # https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
-NEWLINE=$'\n'
+
+NEW_LINE=$'\n'
+BRANCH_THEME='%K{112}%F{0}'
+CLOCK_THEME='%K{220}%F{0}'
+DIRECTORY_THEME='%K{39}%F{0}'
+
+clock() {
+	echo $CLOCK_THEME '%D{%H:%M:%S} %f%k'
+}
+
+directory() {
+	echo $DIRECTORY_THEME '%~ %f%k'
+}
+
+git_branch() {
+	BRANCHES=$(git branch 2>/dev/null)
+	# Contains '*' (* character should be present in the left side of the current branch)
+	if [[ $BRANCHES == *"*"* ]] then
+		BRANCH=$(echo $BRANCHES | grep "^*" | colrm 1 2)
+		echo $BRANCH_THEME $BRANCH '%f%k'
+	fi
+}
+
 setopt PROMPT_SUBST
-PROMPT='%K{220}%F{0} %D{%H:%M:%S} %f%k%K{39}%F{0} %~ %f%k%K{112}%F{0} $(git branch 2>/dev/null | grep "^*" | colrm 1 2) %f%k ${NEWLINE}$ '
+PROMPT='$(clock)$(directory)$(git_branch)${NEW_LINE}> '
 TMOUT=1
 
 TRAPALRM() {
