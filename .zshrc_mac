@@ -16,7 +16,6 @@ jdk() {
 # https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/
 # https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
 
-NEW_LINE=$'\n'
 BRANCH_THEME='%K{112}%F{0}'
 CLOCK_THEME='%K{220}%F{0}'
 DIRECTORY_THEME='%K{39}%F{0}'
@@ -39,7 +38,7 @@ git_branch() {
 }
 
 setopt PROMPT_SUBST
-PROMPT='$(clock)$(directory)$(git_branch)${NEW_LINE}-> '
+PROMPT='$(clock)$(directory)$(git_branch) > '
 TMOUT=1
 
 TRAPALRM() {
