@@ -1,13 +1,36 @@
 # ***************************************
 # https://askubuntu.com/a/360172/1341415
+
+BRANCH_THEME='%K{#74C410}%F{#000000}'
+CLOCK_THEME='%K{#C7AA10}%F{#000000}'
+DIRECTORY_THEME='%K{#1778BD}%F{#000000}'
+
+clock() {
+    echo $CLOCK_THEME '%D{%H:%M:%S} %f%k'
+}
+
+directory() {
+    echo $DIRECTORY_THEME '%~ %f%k'
+}
+
+git_branch() {
+    BRANCHES=$(git branch 2>/dev/null)
+    # Contains '*' (* character should be present in the left side of the current branch)
+    if [[ $BRANCHES == *"*"* ]] then
+        BRANCH=$(echo $BRANCHES | grep "^*" | colrm 1 2)
+        echo $BRANCH_THEME $BRANCH '%f%k'
+    fi
+}
+
 setopt PROMPT_SUBST
 # Customize prompt (timestamp) (current directory) (git branch) and some color
-PROMPT='%K{#C7AA10}%F{#000000}%D{ %H:%M:%S }%k%f%K{#1778BD}%F{#000000} %~ %k%f%K{#74C410}%F{#000000} $(git branch 2>/dev/null | grep "^*" | colrm 1 2) %k%f > %b'
+PROMPT='$(clock)$(directory)$(git_branch) > '
 TMOUT=1
 
 TRAPALRM() {
     zle reset-prompt
 }
+
 # ***************************************
 
 alias ll='ls -laGh'
