@@ -38,3 +38,5 @@ alias gl='git log --pretty=format:"%C(Green)%h %C(Red)[.%D.] %C(Blue)[%an] %C(Ye
 
 # https://golang.org/doc/tutorial/compile-install
 export PATH=$PATH:$HOME/go/bin
+https://stackoverflow.com/a/35076805/7054799
+export PATH=$PATH:/usr/local/go/bin
