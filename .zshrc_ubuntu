@@ -35,6 +35,7 @@ TRAPALRM() {
 
 alias ll='ls -laGh'
 alias gl='git log --pretty=format:"%C(Green)%h %C(Red)[.%D.] %C(Blue)[%an] %C(Yellow)[%s] %C(Magenta)[%ad (%ar)]"'
+alias notes='cd /home/cesar/Documents/dev/repos/notes'
 
 # https://golang.org/doc/tutorial/compile-install
 export PATH=$PATH:$HOME/go/bin
