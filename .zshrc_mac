@@ -49,3 +49,7 @@ TMOUT=1
 TRAPALRM() {
     zle reset-prompt
 }
+
+# Tmux / Tmuxinator / nvim
+alias notes='tmuxinator notes'
+
