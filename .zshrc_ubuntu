@@ -1,6 +1,11 @@
 # ***************************************
 # https://askubuntu.com/a/360172/1341415
 
+# MacOS Terminal
+# BRANCH_THEME='%K{#74C410}%F{#000000}'
+# CLOCK_THEME='%K{#C7AA10}%F{#000000}'
+# DIRECTORY_THEME='%K{#1778BD}%F{#000000}'
+# iTerm2
 BRANCH_THEME='%K{#74C410}%F{#000000}'
 CLOCK_THEME='%K{#C7AA10}%F{#000000}'
 DIRECTORY_THEME='%K{#1778BD}%F{#000000}'
