@@ -16,9 +16,14 @@ jdk() {
 # https://scriptingosx.com/2019/07/moving-to-zsh-06-customizing-the-zsh-prompt/
 # https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
 
-BRANCH_THEME='%K{112}%F{0}'
-CLOCK_THEME='%K{220}%F{0}'
-DIRECTORY_THEME='%K{39}%F{0}'
+# MacOS Terminal
+# BRANCH_THEME='%K{#74C410}%F{#000000}'
+# CLOCK_THEME='%K{#C7AA10}%F{#000000}'
+# DIRECTORY_THEME='%K{#1778BD}%F{#000000}'
+# iTerm2
+BRANCH_THEME='%K{#74C410}%F{#000000}'
+CLOCK_THEME='%K{#C7AA10}%F{#000000}'
+DIRECTORY_THEME='%K{#1778BD}%F{#000000}'
 
 clock() {
 	echo $CLOCK_THEME '%D{%H:%M:%S} %f%k'
