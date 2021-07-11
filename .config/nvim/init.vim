@@ -1,6 +1,12 @@
 call plug#begin()
 " LSP
 Plug 'mfussenegger/nvim-jdtls'
+" Autocompletion
+Plug 'hrsh7th/nvim-compe'
+" Symbols
+Plug 'simrat39/symbols-outline.nvim'
+" End of LSP
+" ***
 " Smooth scroll
 " Plug 'karb94/neoscroll.nvim'
 " Show scrollbar line in the right side
@@ -17,8 +23,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Autocompletion
-Plug 'hrsh7th/nvim-compe'
 call plug#end()
 
 " ****
@@ -161,6 +165,4 @@ vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 EOF
-
-
 
