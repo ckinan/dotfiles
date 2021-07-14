@@ -26,11 +26,11 @@ CLOCK_THEME='%K{#C7AA10}%F{#000000}'
 DIRECTORY_THEME='%K{#1778BD}%F{#000000}'
 
 clock() {
-	echo $CLOCK_THEME '%D{%H:%M:%S} %f%k'
+	echo $CLOCK_THEME Ôôè '%D{%H:%M:%S} %f%k'
 }
 
 directory() {
-	echo $DIRECTORY_THEME '%~ %f%k'
+	echo $DIRECTORY_THEME Ôùï '%~ %f%k'
 }
 
 git_branch() {
@@ -38,9 +38,10 @@ git_branch() {
 	# Contains '*' (* character should be present in the left side of the current branch)
 	if [[ $BRANCHES == *"*"* ]] then
 		BRANCH=$(echo $BRANCHES | grep "^*" | colrm 1 2)
-		echo $BRANCH_THEME $BRANCH '%f%k'
+		echo $BRANCH_THEME Óú• $BRANCH '%f%k'
 	fi
 }
+
 
 setopt PROMPT_SUBST
 PROMPT='$(clock)$(directory)$(git_branch) > '
