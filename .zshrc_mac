@@ -26,11 +26,11 @@ CLOCK_THEME='%K{#C7AA10}%F{#2E3440}'
 DIRECTORY_THEME='%K{#1778BD}%F{#2E3440}'
 
 clock() {
-	echo $CLOCK_THEME  '%D{%H:%M:%S} %f%k'
+	echo $CLOCK_THEME '%D{%H:%M:%S} %f%k'
 }
 
 directory() {
-	echo $DIRECTORY_THEME  '%~ %f%k'
+	echo $DIRECTORY_THEME '%~ %f%k'
 }
 
 git_branch() {
@@ -38,7 +38,7 @@ git_branch() {
 	# Contains '*' (* character should be present in the left side of the current branch)
 	if [[ $BRANCHES == *"*"* ]] then
 		BRANCH=$(echo $BRANCHES | grep "^*" | colrm 1 2)
-		echo $BRANCH_THEME  $BRANCH '%f%k'
+		echo $BRANCH_THEME $BRANCH '%f%k'
 	fi
 }
 
